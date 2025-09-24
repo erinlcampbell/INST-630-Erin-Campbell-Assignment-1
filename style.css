@@ -2,38 +2,45 @@
 /* These styles are very, very ugly. */
 /* Time to make them attractive, legible, and usable */
 
+/* Animal Crossing UI Font*/
 @font-face {
     font-family: ac-text;
     src: url(fonts/FOT-Seurat\ Pro\ B.otf)
 }
 
+/* Animal Crossing Title Font*/
 @font-face {
     font-family: ac;
     src: url(fonts/qlarendon\ bold.otf)
 }
 
+
+/*change background color, reset margin and padding, set font family, and change text color*/
 body {
-    font-family: Times, serif;
+    
     background-color: #d9d9d9;
     margin: 0;
     padding: 0;
-    font-family: ac-text;
+    font-family: ac-text, sans-serif;
     color:rgb(73, 60, 46)
 }
 
+/*Make base layout vertial with column flex directino, make the background yellow, 
+create a white border, curve the border corners, add some spacing*/
 .recipe-container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     background-color: rgb(255, 211, 54);
     border: 10px solid white;
     border-radius: 50px;
     margin: 10px;
-    padding: 20px;
-  gap: 10px;
+    padding: 40px;
+    gap: 40px;
 
 }
 
+/*header items organized in a row, and setting the height of the whisk images*/
 .recipe-header {
     display: flex;
     flex-direction: row;
@@ -45,6 +52,9 @@ body {
     
 }
 
+/*includes title and image in the middle of the header, organized vertically. set the left and right margin to auto
+to have images on either side at the far ends of the screen (as far left and as far right). set the 
+size of the cookie image*/
 .header-middle{
     align-items: center;
     display: flex;
@@ -58,39 +68,43 @@ body {
 }
 
 .recipe-title {
-    color: rgb(255, 255, 255);
+    
     font-size: 40px;
     font-family: ac;
     text-align: center;
 
 }
 
+/* white the times in the own section, organize the times, servings and duration vertically, and mkaing them 
+centered*/
 .recipe-meta {
   display: flex;
   flex-direction: column;
   flex: 1;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
 }
 
+/*the times section flows horizontally so they are seen as separate from the other meta information*/
 .times{
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
+/*curve corners of the box and set colors and font specs*/
 .recipe-description {
     
     font-size: 18px;
     text-align: center;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 20px;
     padding: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    
     
 }
 
+/*ingredients title and list flow vertically, curving corners, changing color and spacing*/
 .ingredients-section {
     display: flex;
     flex-direction: column;
@@ -103,13 +117,15 @@ body {
 
 .ingredients-list {
     list-style: none;
-   background-color: white;
-   border: 1px solid rgb(255, 255, 255);
-  padding: 15px;
-  border-radius: 25px;
+    background-color: white;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 25px;
   
 }
 
+/*middle section made up of ingredients list and an iamge section with two images. These items appear 
+horizontally, and the images are centered vertically*/
 .middle-section{
     display: flex;
     flex-direction: row;
@@ -120,6 +136,7 @@ body {
 
 }
 
+/*images set horizontal, margin left and right auto to center, adding gap in between the two*/
 .image-section{
     display: flex;
     flex-direction: row;
@@ -148,6 +165,7 @@ body {
     margin: 3px;
 }
 
+/*recipe footer smaller font size and each text box at either end of the screen horizontally*/
 .recipe-footer {
     display: flex;
     flex-direction: row;
@@ -163,10 +181,17 @@ body {
     height: 50px;
     
 }
-
+/*alter spacings and fonts and image sizes for smaller screen*/
 @media screen and (width < 420px) {
+    
     body{
         font-size: 14px;
+    }
+
+    
+    .recipe-container{
+        gap: 30px;
+        padding: 30px;
     }
     .recipe-header{
         h1{
@@ -189,6 +214,7 @@ body {
         font-size: 12px;
     }
 
+    /*times no longer horizontal to avoid smooshing */
     .times{
         flex-direction: column;
         gap: 5px;
@@ -198,7 +224,7 @@ body {
     .middle-section{
         flex-direction: column;
         align-items: center;
-        margin: 10px;
+        
 
         img{
             margin: 10px;
