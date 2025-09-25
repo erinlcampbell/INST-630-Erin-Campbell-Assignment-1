@@ -182,7 +182,7 @@ horizontally, and the images are centered vertically*/
     
 }
 /*alter spacings and fonts and image sizes for smaller screen*/
-@media screen and (width < 420px) {
+@media screen and (width < 1025px) {
     
     body{
         font-size: 14px;
