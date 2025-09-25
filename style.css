@@ -165,6 +165,10 @@ horizontally, and the images are centered vertically*/
     margin: 3px;
 }
 
+strong{
+    text-decoration: underline;
+}
+
 /*recipe footer smaller font size and each text box at either end of the screen horizontally*/
 .recipe-footer {
     display: flex;
